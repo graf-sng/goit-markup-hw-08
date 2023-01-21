@@ -234,27 +234,48 @@
           <h2 class="about__title">Чим ми займаємося</h2>
           <ul class="about__list">
             <li class="about__item">
-              <img
-                srcset="./images/work_1.jpg 1x, ./images/work_1_2x.jpg 2x"
-                alt="робота за клавіатурою"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/work_1.webp 1x, ./images/work_1_2x.webp 2x"
+                  type="image/webp" />
+                <source
+                  srcset="./images/work_1.jpg 1x, ./images/work_1_2x.jpg 2x"
+                  type="image/jpeg" />
+                <img
+                  src="./images/work_1.jpg"
+                  alt="робота за клавіатурою"
+                  width="370"
+              /></picture>
               <p class="about__text">Десктопні додатки</p>
             </li>
             <li class="about__item">
-              <img
-                srcset="./images/work_2.jpg 1x, ./images/work_2_2x.jpg 2x"
-                alt="робота за телефоном"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/work_2.webp 1x, ./images/work_2_2x.webp 2x"
+                  type="image/webp" />
+                <source
+                  srcset="./images/work_2.jpg 1x, ./images/work_2_2x.jpg 2x"
+                  type="image/jpeg" />
+                <img
+                  src="./images/work_2.jpg"
+                  alt="робота за телефоном"
+                  width="370"
+              /></picture>
               <p class="about__text">Мобільні додатки</p>
             </li>
             <li class="about__item">
-              <img
-                srcset="./images/work_3.jpg 1x, ./images/work_3_2x.jpg 2x"
-                alt="робота за планшетом"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/work_3.webp 1x, ./images/work_3_2x.webp 2x"
+                  type="image/webp" />
+                <source
+                  srcset="./images/work_3.jpg 1x, ./images/work_3_2x.jpg 2x"
+                  type="image/jpeg" />
+                <img
+                  src="./images/work_3.jpg"
+                  alt="робота за планшетом"
+                  width="370"
+              /></picture>
               <p class="about__text">Дизайнерські рішення</p>
             </li>
           </ul>
@@ -265,11 +286,21 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                class="team__item--avatar"
-                srcset="./images/avatar_1.jpg 1x, ./images/avatar_1_2x.jpg 2x"
-                alt="усміхнений хлопець в окулярах"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/avatar_1.webp    1x,
+                    ./images/avatar_1_2x.webp 2x
+                  "
+                  type="image/webp" />
+                <source
+                  srcset="./images/avatar_1.jpg 1x, ./images/avatar_1_2x.jpg 2x"
+                  type="image/jpeg" />
+                <img
+                  class="team__item--avatar"
+                  src="./images/avatar_1.jpg"
+                  alt="усміхнений хлопець в окулярах"
+              /></picture>
               <div class="team__info">
                 <h3 class="team__info--title">Ігор Дем'яненко</h3>
                 <p lang="en" class="team__info--subtitle">Product Designer</p>
@@ -306,11 +337,21 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__item--avatar"
-                srcset="./images/avatar_2.jpg 1x, ./images/avatar_2_2x.jpg 2x"
-                alt="усміхнена дівчина в окулярах"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/avatar_2.webp    1x,
+                    ./images/avatar_2_2x.webp 2x
+                  "
+                  type="image/webp" />
+                <source
+                  srcset="./images/avatar_2.jpg 1x, ./images/avatar_2_2x.jpg 2x"
+                  type="image/jpeg" />
+                <img
+                  class="team__item--avatar"
+                  src="./images/avatar_2.jpg"
+                  alt="усміхнена дівчина в окулярах"
+              /></picture>
               <div class="team__info">
                 <h3 class="team__info--title">Ольга Рєпіна</h3>
                 <p lang="en" class="team__info--subtitle">Frontend Developer</p>
@@ -347,11 +388,21 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__item--avatar"
-                srcset="./images/avatar_3.jpg 1x, ./images/avatar_3_2x.jpg 2x"
-                alt="усміхнений хлопець"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/avatar_3.webp    1x,
+                    ./images/avatar_3_2x.webp 2x
+                  "
+                  type="image/webp" />
+                <source
+                  srcset="./images/avatar_3.jpg 1x, ./images/avatar_3_2x.jpg 2x"
+                  type="image/jpeg" />
+                <img
+                  class="team__item--avatar"
+                  src="images/avatar_3.jpg"
+                  alt="усміхнений хлопець"
+              /></picture>
               <div class="team__info">
                 <h3 class="team__info--title">Микола Тарасов</h3>
                 <p lang="en" class="team__info--subtitle">Marketing</p>
@@ -388,11 +439,21 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__item--avatar"
-                srcset="./images/avatar_4.jpg 1x, ./images/avatar_4_2x.jpg 2x"
-                alt="усміхнений хлопець в окулярах"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/avatar_4.webp    1x,
+                    ./images/avatar_4_2x.webp 2x
+                  "
+                  type="image/webp" />
+                <source
+                  srcset="./images/avatar_4.jpg 1x, ./images/avatar_4_2x.jpg 2x"
+                  type="image/jpeg" />
+                <img
+                  class="team__item--avatar"
+                  src="images/avatar_4.jpg"
+                  alt="усміхнений хлопець в окулярах"
+              /></picture>
               <div class="team__info">
                 <h3 class="team__info--title">Михайло Єрмаков</h3>
                 <p lang="en" class="team__info--subtitle">UI Designer</p>
