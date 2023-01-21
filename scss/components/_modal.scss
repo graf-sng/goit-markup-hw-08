@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
@@ -28,6 +28,9 @@
   border-radius: 4px;
   outline: 1 orangered solid;
 
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
   @media screen and (min-width: 1200px) {
     width: 528px;
     height: 581px;
@@ -101,7 +104,9 @@
     border-radius: 4px;
     transition: outline 250ms $line-function, border-color 250ms $line-function,
       fill 250ms $line-function;
-
+    @media screen and (max-width: 479px) {
+      width: 100%;
+    }
     @media screen and (min-width: 1200px) {
       width: 448px;
     }

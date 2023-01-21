@@ -14,7 +14,7 @@
         top: 0%;
         left: 0;
         width: 100%;
-        height: 796px;
+        height: 100vh;
         background-color: $secondary-text-color;
         padding: 48px 40px;
         line-height: 1.175;
@@ -76,7 +76,17 @@
     &--list:not(:first-child) {
       padding-left: 10px;
     }
-
+    @media screen and (max-width: 479px) {
+      flex-wrap: wrap;
+      &--link {
+        margin-bottom: 10px;
+      }
+      &--list:not(:last-child),
+      &--list:not(:first-child) {
+        padding: 0 10px 0 0;
+        border: none;
+      }
+    }
     @media screen and (min-width: 768px) {
       display: none;
     }
@@ -127,6 +137,9 @@
       font-size: 34px;
       color: $primary-text-color;
 
+      @media screen and (max-width: 479px) {
+        font-size: 20px;
+      }
       @media screen and (min-width: 768px) {
         display: flex;
         align-items: center;
