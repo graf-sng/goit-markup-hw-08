@@ -1,0 +1,176 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms $line-function, visibility 250ms $line-function,
+    scale 250ms $line-function;
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    scale: 0;
+  }
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 609px;
+  background-color: $secondary-text-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  outline: 1 orangered solid;
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
+  &__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+
+    width: 30px;
+    height: 30px;
+    background-color: $secondary-text-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  &__close--icon {
+    color: $black-color;
+    fill: currentColor;
+    width: 18px;
+    height: 18px;
+    transition: color 250ms $line-function;
+  }
+  &__close:hover &__close--icon {
+    color: $acent-color;
+  }
+  &__form {
+    padding: 40px;
+    display: block;
+    font-size: 16px;
+  }
+  &__title {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: $primary-title-color;
+  }
+  &__lable {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    color: $primary-text-color;
+    text-align: left;
+  }
+  &__input--icon {
+    position: absolute;
+    left: 12px;
+    top: 29px;
+    fill: $primary-title-color;
+  }
+  &__input,
+  &__text {
+    width: 370px;
+    padding: 11px 12px;
+    height: 40px;
+    font-size: 16px;
+    background-color: $secondary-text-color;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: outline 250ms $line-function, border-color 250ms $line-function,
+      fill 250ms $line-function;
+
+    @media screen and (min-width: 1200px) {
+      width: 448px;
+    }
+  }
+  &__input::placeholder {
+    padding-left: 30px;
+  }
+  &__text {
+    height: 120px;
+    resize: none;
+    &::placeholder {
+      color: rgba(117, 117, 117, 0.5);
+    }
+  }
+  &__input:focus,
+  &__text:focus,
+  &__input:focus + &__input--icon {
+    outline: $acent-color;
+    border-color: $acent-color;
+    fill: $acent-color;
+  }
+  &__input:focus,
+  &__input:not(:placeholder-shown) {
+    padding-left: 42px;
+  }
+  &__text:focus,
+  &__text:not(:placeholder-shown) {
+    padding: 12px 16px;
+  }
+  &__checkbox {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+    font-size: 12px;
+    line-height: 1.7;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+    }
+    &--input {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      transition: border 250ms $line-function,
+        background-color 250ms $line-function, fill 250ms $line-function;
+    }
+    &--icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-355px, 4px);
+      fill: transparent;
+      border: 2px solid $primary-title-color;
+      border-radius: 4px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+      @media screen and (min-width: 1200px) {
+        transform: translate(-423px, 4px);
+      }
+    }
+    &--link {
+      display: inline-block;
+      text-decoration: underline;
+      color: $acent-color;
+    }
+  }
+  &__checkbox--input:checked ~ &__checkbox--icon {
+    border: 2px solid transparent;
+    background-color: $acent-color;
+    fill: $acent-color;
+  }
+}

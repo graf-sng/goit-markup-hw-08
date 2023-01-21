@@ -1,0 +1,38 @@
+.about {
+  padding-bottom: 94px;
+  &__list {
+    display: flex;
+    margin: 0;
+    gap: 30px;
+  }
+  &__title {
+    margin-bottom: 50px;
+    color: $primary-title-color;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+  }
+  &__item {
+    position: relative;
+  }
+  &__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    color: $secondary-text-color;
+    background-color: rgba(47, 48, 58, 0.8);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}

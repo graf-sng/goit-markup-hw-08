@@ -1,0 +1,115 @@
+.footer {
+  background-color: #2f303a;
+  padding: 60px 0;
+
+  &__container {
+    color: $secondary-text-color;
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      column-gap: 92px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    address {
+      margin-bottom: 60px;
+    }
+  }
+}
+.address__list {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 9px;
+  }
+}
+.address__link {
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  line-height: 1.71;
+  font-style: normal;
+  transition: color 250ms $line-function;
+  &:hover,
+  &:focus {
+    color: $secondary-text-color;
+  }
+}
+.social__subtitle,
+.feedback__subtitle {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142;
+  text-transform: uppercase;
+  color: $secondary-text-color;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
+}
+.social {
+  &__list {
+    display: flex;
+    column-gap: 10px;
+    @media screen and (max-width: 767px) {
+      justify-content: center;
+      margin-bottom: 60px;
+    }
+  }
+  &__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: $secondary-text-color;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms $line-function;
+    &:hover,
+    &:focus {
+      background-color: $acent-color;
+    }
+  }
+  &__icon {
+    fill: currentColor;
+  }
+}
+.feedback {
+  @media screen and (max-width: 1199px) {
+    max-width: 450px;
+    text-align: center;
+  }
+  &__input {
+    margin-bottom: 20px;
+    color: #fff;
+    width: 450px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+
+    @media screen and (min-width: 1200px) {
+      padding-left: 15px;
+      margin-bottom: 0px;
+      margin-right: 11px;
+      width: 358px;
+      margin-bottom: 20px;
+    }
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 16px;
+      line-height: 1.25;
+    }
+  }
+}
